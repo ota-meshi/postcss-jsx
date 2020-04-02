@@ -3,6 +3,86 @@
 	"type": "root",
 	"nodes": [
 		{
+			"raws": {},
+			"source": {
+				"input": {
+					"file": "emotion-10.jsx"
+				},
+				"start": {
+					"line": 1,
+					"column": 1
+				},
+				"inline": false,
+				"lang": "script-comment",
+				"syntax": {}
+			},
+			"type": "root",
+			"nodes": [
+				{
+					"raws": {
+						"left": " ",
+						"right": " ",
+						"inline": false
+					},
+					"text": "global render",
+					"type": "comment",
+					"source": {
+						"input": {
+							"file": "emotion-10.jsx"
+						},
+						"start": {
+							"line": 1,
+							"column": 1
+						},
+						"end": {
+							"line": 1,
+							"column": 20
+						}
+					}
+				}
+			]
+		},
+		{
+			"raws": {},
+			"source": {
+				"input": {
+					"file": "emotion-10.jsx"
+				},
+				"start": {
+					"line": 2,
+					"column": 1
+				},
+				"inline": false,
+				"lang": "script-comment",
+				"syntax": {}
+			},
+			"type": "root",
+			"nodes": [
+				{
+					"raws": {
+						"left": "",
+						"right": " ",
+						"inline": false
+					},
+					"text": "* @jsx jsx",
+					"type": "comment",
+					"source": {
+						"input": {
+							"file": "emotion-10.jsx"
+						},
+						"start": {
+							"line": 2,
+							"column": 1
+						},
+						"end": {
+							"line": 2,
+							"column": 16
+						}
+					}
+				}
+			]
+		},
+		{
 			"raws": {
 				"semicolon": true,
 				"after": "\n"

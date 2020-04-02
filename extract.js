@@ -438,23 +438,75 @@ function literalParser(source, opts, styles) {
 
 			if (target) {
 				parent = target;
-				targetStyles = target.opts.templateLiteralStyles;
+				targetStyles = target.opts.innerStyles;
 			} else {
 				break;
 			}
 		}
 
 		if (parent) {
-			const templateLiteralStyles =
-				parent.opts.templateLiteralStyles || (parent.opts.templateLiteralStyles = []);
+			const innerStyles = parent.opts.innerStyles || (parent.opts.innerStyles = []);
 
-			templateLiteralStyles.push(style);
+			innerStyles.push(style);
 		} else {
 			tplLiteralStyles.push(style);
 		}
 	});
 
-	return (styles || []).concat(objLiteralStyles).concat(tplLiteralStyles);
+	const rootCommentStyles = [];
+
+	ast.comments.forEach((node) => {
+		if (
+			objLiteralStyles.some((style) => style.startIndex <= node.end && node.start < style.endIndex)
+		) {
+			return;
+		}
+
+		let stylesContainer = rootCommentStyles;
+
+		if (
+			tplLiteralStyles.some((style) => style.startIndex <= node.end && node.start < style.endIndex)
+		) {
+			let parent = null;
+			let targetStyles = tplLiteralStyles;
+
+			while (targetStyles) {
+				const target = targetStyles.find(
+					(targetStyle) => targetStyle.startIndex <= node.start && node.end < targetStyle.endIndex
+				);
+
+				if (target) {
+					parent = target;
+					targetStyles = target.opts.innerStyles;
+				} else {
+					break;
+				}
+			}
+
+			if (parent) {
+				stylesContainer = parent.opts.innerStyles || (parent.opts.innerStyles = []);
+			} else {
+				return;
+			}
+		}
+
+		const commentSyntax = require('./script-comment-syntax');
+
+		const style = {
+			startIndex: node.start,
+			endIndex: node.end,
+			content: source.slice(node.start, node.end),
+			opts: {
+				node,
+			},
+			syntax: commentSyntax,
+			lang: 'script-comment',
+		};
+
+		stylesContainer.push(style);
+	});
+
+	return (styles || []).concat(objLiteralStyles).concat(tplLiteralStyles).concat(rootCommentStyles);
 }
 
 module.exports = literalParser;

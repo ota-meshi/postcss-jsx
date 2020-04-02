@@ -3,6 +3,46 @@
 	"type": "root",
 	"nodes": [
 		{
+			"raws": {},
+			"source": {
+				"input": {
+					"file": "react-emotion.jsx"
+				},
+				"start": {
+					"line": 1,
+					"column": 1
+				},
+				"inline": false,
+				"lang": "script-comment",
+				"syntax": {}
+			},
+			"type": "root",
+			"nodes": [
+				{
+					"raws": {
+						"left": " ",
+						"right": " ",
+						"inline": false
+					},
+					"text": "global render",
+					"type": "comment",
+					"source": {
+						"input": {
+							"file": "react-emotion.jsx"
+						},
+						"start": {
+							"line": 1,
+							"column": 1
+						},
+						"end": {
+							"line": 1,
+							"column": 20
+						}
+					}
+				}
+			]
+		},
+		{
 			"raws": {
 				"semicolon": true,
 				"after": "\n"

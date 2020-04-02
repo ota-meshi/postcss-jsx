@@ -9,6 +9,86 @@
 					"file": "jsx.jsx"
 				},
 				"start": {
+					"line": 2,
+					"column": 1
+				},
+				"inline": false,
+				"lang": "script-comment",
+				"syntax": {}
+			},
+			"type": "root",
+			"nodes": [
+				{
+					"raws": {
+						"left": " ",
+						"right": " ",
+						"inline": false
+					},
+					"text": "eslint comma-dangle: [\"error\", \"never\"]",
+					"type": "comment",
+					"source": {
+						"input": {
+							"file": "jsx.jsx"
+						},
+						"start": {
+							"line": 2,
+							"column": 1
+						},
+						"end": {
+							"line": 2,
+							"column": 46
+						}
+					}
+				}
+			]
+		},
+		{
+			"raws": {},
+			"source": {
+				"input": {
+					"file": "jsx.jsx"
+				},
+				"start": {
+					"line": 3,
+					"column": 1
+				},
+				"inline": false,
+				"lang": "script-comment",
+				"syntax": {}
+			},
+			"type": "root",
+			"nodes": [
+				{
+					"raws": {
+						"left": " ",
+						"right": " ",
+						"inline": false
+					},
+					"text": "global notExist",
+					"type": "comment",
+					"source": {
+						"input": {
+							"file": "jsx.jsx"
+						},
+						"start": {
+							"line": 3,
+							"column": 1
+						},
+						"end": {
+							"line": 3,
+							"column": 22
+						}
+					}
+				}
+			]
+		},
+		{
+			"raws": {},
+			"source": {
+				"input": {
+					"file": "jsx.jsx"
+				},
+				"start": {
 					"line": 5,
 					"column": 18
 				},
@@ -242,6 +322,46 @@
 						"end": {
 							"line": 24,
 							"column": 1
+						}
+					}
+				}
+			]
+		},
+		{
+			"raws": {},
+			"source": {
+				"input": {
+					"file": "jsx.jsx"
+				},
+				"start": {
+					"line": 29,
+					"column": 31
+				},
+				"inline": false,
+				"lang": "script-comment",
+				"syntax": {}
+			},
+			"type": "root",
+			"nodes": [
+				{
+					"raws": {
+						"left": " ",
+						"right": "",
+						"inline": true
+					},
+					"text": "must not trigger any warnings",
+					"type": "comment",
+					"source": {
+						"input": {
+							"file": "jsx.jsx"
+						},
+						"start": {
+							"line": 29,
+							"column": 31
+						},
+						"end": {
+							"line": 29,
+							"column": 63
 						}
 					}
 				}

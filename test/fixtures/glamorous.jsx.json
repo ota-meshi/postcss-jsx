@@ -685,6 +685,46 @@
 					"file": "glamorous.jsx"
 				},
 				"start": {
+					"line": 29,
+					"column": 2
+				},
+				"inline": false,
+				"lang": "script-comment",
+				"syntax": {}
+			},
+			"type": "root",
+			"nodes": [
+				{
+					"raws": {
+						"left": " ",
+						"right": "",
+						"inline": true
+					},
+					"text": "end",
+					"type": "comment",
+					"source": {
+						"input": {
+							"file": "glamorous.jsx"
+						},
+						"start": {
+							"line": 29,
+							"column": 2
+						},
+						"end": {
+							"line": 29,
+							"column": 8
+						}
+					}
+				}
+			]
+		},
+		{
+			"raws": {},
+			"source": {
+				"input": {
+					"file": "glamorous.jsx"
+				},
+				"start": {
 					"line": 30,
 					"column": 19
 				},

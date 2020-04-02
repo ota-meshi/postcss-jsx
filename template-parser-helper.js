@@ -42,20 +42,17 @@ function literal(start) {
 
 	const input = this.input;
 
-	if (input.templateLiteralStyles) {
+	if (input.innerStyles) {
 		const offset = input.quasis[0].start;
 		const nodeIndex = getNodeIndex(node, input);
 		const start = offset + nodeIndex;
 		const end = start + node.text.length;
-		const templateLiteralStyles = input.templateLiteralStyles.filter(
+		const innerStyles = input.innerStyles.filter(
 			(style) => style.startIndex <= end && start < style.endIndex
 		);
 
-		if (templateLiteralStyles.length) {
-			const nodes = parseTemplateLiteralStyles(templateLiteralStyles, input, [
-				nodeIndex,
-				nodeIndex + node.text.length,
-			]);
+		if (innerStyles.length) {
+			const nodes = parseInnerStyles(innerStyles, input, [nodeIndex, nodeIndex + node.text.length]);
 
 			if (nodes.length) {
 				node.nodes = nodes;
@@ -83,7 +80,7 @@ module.exports = {
 	literal,
 };
 
-function parseTemplateLiteralStyles(styles, input, range) {
+function parseInnerStyles(styles, input, range) {
 	const offset = input.quasis[0].start;
 	const source = input.css;
 	const parseStyle = docFixer(offset, source, input.parseOptions);

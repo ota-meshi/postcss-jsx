@@ -17,7 +17,7 @@ function clean(node) {
 		delete node.source.input.css;
 		delete node.source.input.hasBOM;
 		delete node.source.input.parseOptions;
-		delete node.source.input.templateLiteralStyles;
+		delete node.source.input.innerStyles;
 		node.source.input.file = path.basename(node.source.input.file);
 	}
 
@@ -38,6 +38,7 @@ describe('should support for each CSS in JS package', () => {
 		'emotion-10.jsx',
 		'glamorous.jsx',
 		'interpolation-content.mjs',
+		'jsx-comments.jsx',
 		'jsx.jsx',
 		'lit-css.mjs',
 		'react-emotion.jsx',
@@ -47,6 +48,7 @@ describe('should support for each CSS in JS package', () => {
 		'styled-components-nesting3.js',
 		'styled-components-nesting-nesting.js',
 		'styled-components-nesting-template-literal.js',
+		'styled-components-nesting-comments.js',
 		'styled-components.js',
 		'styled-opts.mjs',
 		'styled-props.jsx',

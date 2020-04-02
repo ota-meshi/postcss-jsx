@@ -1,0 +1,320 @@
+{
+	"raws": {},
+	"type": "root",
+	"nodes": [
+		{
+			"raws": {
+				"semicolon": false,
+				"after": "\n"
+			},
+			"type": "root",
+			"nodes": [
+				{
+					"raws": {
+						"before": "\n\t",
+						"between": ": "
+					},
+					"type": "decl",
+					"source": {
+						"start": {
+							"line": 3,
+							"column": 2
+						},
+						"input": {
+							"file": "styled-components-nesting-comments.js",
+							"quasis": [
+								{
+									"start": 75,
+									"end": 93
+								},
+								{
+									"start": 207,
+									"end": 208
+								}
+							]
+						},
+						"end": {
+							"line": 3,
+							"column": 15
+						}
+					},
+					"prop": "padding",
+					"value": "10px"
+				},
+				{
+					"raws": {
+						"before": "\n\t"
+					},
+					"text": "${\n\t\t// inline-comment 1\n\t\tcss`\n\t\tcolor: #b02d00;\n\t\t${css`\n\t\t\tbackground: white;\n\t\t`\n\t/* block-comment 2 */\n\t}\n\t`}",
+					"type": "literal",
+					"source": {
+						"start": {
+							"line": 4,
+							"column": 2
+						},
+						"input": {
+							"file": "styled-components-nesting-comments.js",
+							"quasis": [
+								{
+									"start": 75,
+									"end": 93
+								},
+								{
+									"start": 207,
+									"end": 208
+								}
+							]
+						}
+					},
+					"nodes": [
+						{
+							"raws": {},
+							"source": {
+								"input": {
+									"file": "styled-components-nesting-comments.js"
+								},
+								"start": {
+									"line": 5,
+									"column": 3
+								},
+								"inline": false,
+								"lang": "script-comment",
+								"syntax": {}
+							},
+							"type": "root",
+							"nodes": [
+								{
+									"raws": {
+										"left": " ",
+										"right": "",
+										"inline": true
+									},
+									"text": "inline-comment 1",
+									"type": "comment",
+									"source": {
+										"input": {
+											"file": "styled-components-nesting-comments.js"
+										},
+										"start": {
+											"line": 5,
+											"column": 3
+										},
+										"end": {
+											"line": 5,
+											"column": 22
+										}
+									}
+								}
+							]
+						},
+						{
+							"raws": {
+								"semicolon": false,
+								"after": "\n\t"
+							},
+							"type": "root",
+							"nodes": [
+								{
+									"raws": {
+										"before": "\n\t\t",
+										"between": ": "
+									},
+									"type": "decl",
+									"source": {
+										"start": {
+											"line": 7,
+											"column": 3
+										},
+										"input": {
+											"file": "styled-components-nesting-comments.js",
+											"quasis": [
+												{
+													"start": 124,
+													"end": 145
+												},
+												{
+													"start": 203,
+													"end": 205
+												}
+											]
+										},
+										"end": {
+											"line": 7,
+											"column": 17
+										}
+									},
+									"prop": "color",
+									"value": "#b02d00"
+								},
+								{
+									"raws": {
+										"before": "\n\t\t"
+									},
+									"text": "${css`\n\t\t\tbackground: white;\n\t\t`\n\t/* block-comment 2 */\n\t}",
+									"type": "literal",
+									"source": {
+										"start": {
+											"line": 8,
+											"column": 3
+										},
+										"input": {
+											"file": "styled-components-nesting-comments.js",
+											"quasis": [
+												{
+													"start": 124,
+													"end": 145
+												},
+												{
+													"start": 203,
+													"end": 205
+												}
+											]
+										}
+									},
+									"nodes": [
+										{
+											"raws": {
+												"semicolon": true,
+												"after": "\n\t\t"
+											},
+											"type": "root",
+											"nodes": [
+												{
+													"raws": {
+														"before": "\n\t\t\t",
+														"between": ": "
+													},
+													"type": "decl",
+													"source": {
+														"start": {
+															"line": 9,
+															"column": 4
+														},
+														"input": {
+															"file": "styled-components-nesting-comments.js"
+														},
+														"end": {
+															"line": 9,
+															"column": 21
+														}
+													},
+													"prop": "background",
+													"value": "white"
+												}
+											],
+											"source": {
+												"input": {
+													"file": "styled-components-nesting-comments.js"
+												},
+												"start": {
+													"line": 8,
+													"column": 9
+												},
+												"inline": false,
+												"lang": "css"
+											}
+										},
+										{
+											"raws": {},
+											"source": {
+												"input": {
+													"file": "styled-components-nesting-comments.js"
+												},
+												"start": {
+													"line": 11,
+													"column": 2
+												},
+												"inline": false,
+												"lang": "script-comment",
+												"syntax": {}
+											},
+											"type": "root",
+											"nodes": [
+												{
+													"raws": {
+														"left": " ",
+														"right": " ",
+														"inline": false
+													},
+													"text": "block-comment 2",
+													"type": "comment",
+													"source": {
+														"input": {
+															"file": "styled-components-nesting-comments.js"
+														},
+														"start": {
+															"line": 11,
+															"column": 2
+														},
+														"end": {
+															"line": 11,
+															"column": 23
+														}
+													}
+												}
+											]
+										}
+									]
+								}
+							],
+							"source": {
+								"input": {
+									"file": "styled-components-nesting-comments.js",
+									"quasis": [
+										{
+											"start": 124,
+											"end": 145
+										},
+										{
+											"start": 203,
+											"end": 205
+										}
+									]
+								},
+								"start": {
+									"line": 6,
+									"column": 7
+								},
+								"inline": false,
+								"lang": "template-literal",
+								"syntax": {}
+							}
+						}
+					]
+				}
+			],
+			"source": {
+				"input": {
+					"file": "styled-components-nesting-comments.js",
+					"quasis": [
+						{
+							"start": 75,
+							"end": 93
+						},
+						{
+							"start": 207,
+							"end": 208
+						}
+					]
+				},
+				"start": {
+					"line": 2,
+					"column": 27
+				},
+				"inline": false,
+				"lang": "template-literal",
+				"syntax": {}
+			}
+		}
+	],
+	"source": {
+		"input": {
+			"file": "styled-components-nesting-comments.js"
+		},
+		"start": {
+			"line": 1,
+			"column": 1
+		},
+		"lang": "jsx"
+	}
+}

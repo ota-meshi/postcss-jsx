@@ -16,7 +16,7 @@ describe('javascript tests', () => {
 		code = code.toString();
 
 		expect(document.toString()).to.equal(code);
-		expect(document.nodes).to.lengthOf(4);
+		expect(document.nodes).to.lengthOf(5);
 
 		document.nodes.forEach((root) => {
 			expect(root.last.toString()).to.be.a('string');
@@ -24,7 +24,7 @@ describe('javascript tests', () => {
 
 			expect(code).to.includes(root.source.input.css);
 			expect(root.source.input.css.length).lessThan(code.length);
-			expect(root.source).to.haveOwnProperty('start').to.haveOwnProperty('line').to.greaterThan(1);
+			expect(root.source).to.haveOwnProperty('start').to.haveOwnProperty('line').to.greaterThan(0);
 
 			root.walk((node) => {
 				expect(node).to.haveOwnProperty('source');
@@ -51,7 +51,7 @@ describe('javascript tests', () => {
 		code = code.toString();
 
 		expect(document.toString()).to.equal(code);
-		expect(document.nodes).to.lengthOf(6);
+		expect(document.nodes).to.lengthOf(8);
 
 		document.nodes.forEach((root) => {
 			expect(root.last.toString()).to.be.a('string');
@@ -59,7 +59,7 @@ describe('javascript tests', () => {
 
 			expect(code).to.includes(root.source.input.css);
 			expect(root.source.input.css.length).lessThan(code.length);
-			expect(root.source).to.haveOwnProperty('start').to.haveOwnProperty('line').to.greaterThan(1);
+			expect(root.source).to.haveOwnProperty('start').to.haveOwnProperty('line').to.greaterThan(0);
 
 			root.walk((node) => {
 				expect(node).to.haveOwnProperty('source');

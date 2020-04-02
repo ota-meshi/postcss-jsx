@@ -16,7 +16,7 @@ describe('javascript tests', () => {
 		code = code.toString();
 
 		expect(document.toString(syntax)).to.equal(code);
-		expect(document.nodes).to.lengthOf(5);
+		expect(document.nodes).to.lengthOf(6);
 
 		document.nodes.forEach((root) => {
 			expect(root.source).to.haveOwnProperty('input');
